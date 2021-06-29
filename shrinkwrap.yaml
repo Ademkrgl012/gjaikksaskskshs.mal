@@ -1,5 +1,5 @@
 dependencies:
-  '@discordjs/opus': 0.3.3
+  '@discordjs/opus': 0.5.3
   canvas: 2.8.0
   common-tags: 1.8.0
   discord-buttons: 3.2.1
@@ -42,30 +42,31 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-ZfFsbgEXW71Rw/6EtBdrP5VxBJy4dthyC0tpQKGKmYFImlmmrykO14Za+BiIVduwjte0jXEBlhSKf0MWbFp9Eg==
-  /@discordjs/node-pre-gyp/0.1.0:
+  /@discordjs/node-pre-gyp/0.4.0:
     dependencies:
       detect-libc: 1.0.3
-      mkdirp: 0.5.5
-      needle: 2.6.0
-      nopt: 4.0.3
-      npm-packlist: 1.4.8
+      https-proxy-agent: 5.0.0
+      make-dir: 3.1.0
+      node-fetch: 2.6.1
+      nopt: 5.0.0
       npmlog: 4.1.2
-      rc: 1.2.8
       rimraf: 3.0.2
       semver: 7.3.5
       tar: 6.1.0
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-6u3EbK2x+j9bM3iK9/pE7BWLxOXZ1PvcsbDo3ZBdPocu95qPHj8zCVsBBk3Cao7V6o8QpwxUyJl6oVJ6T3ZgAg==
-  /@discordjs/opus/0.3.3:
+      integrity: sha512-CXLpoM2hgS94i9+EAVowR92y8o3KdKc9fmoe8/FTp5XTzvoXzJln3+Ctl0oBpE6c9+11zd9oJnZPdkkOBkDPSA==
+  /@discordjs/opus/0.5.3:
     dependencies:
-      '@discordjs/node-pre-gyp': 0.1.0
+      '@discordjs/node-pre-gyp': 0.4.0
       node-addon-api: 3.2.1
     dev: false
+    engines:
+      node: '>=12.0.0'
     requiresBuild: true
     resolution:
-      integrity: sha512-n3hUs4RY0K8cz8vJ2GiZE4EdJlexoxs1vGsaft5lZlAnU6wsZfncpv4px+HVOMKN8ddtjriGfsrG4lVkAyZcmQ==
+      integrity: sha512-IQhCwCy2WKXLe+qkOkwO1Wjgk20uqeAbqM62tCbzIqbTsXX4YAge8Me9RFnI77Lx+UTkgm4rSVM3VPVdS/GsUw==
   /@mapbox/node-pre-gyp/1.0.5:
     dependencies:
       detect-libc: 1.0.3
@@ -379,12 +380,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
-  /debug/3.2.7:
-    dependencies:
-      ms: 2.1.3
-    dev: false
-    resolution:
-      integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
   /debug/4.3.1:
     dependencies:
       ms: 2.1.2
@@ -763,12 +758,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
-  /ignore-walk/3.0.4:
-    dependencies:
-      minimatch: 3.0.4
-    dev: false
-    resolution:
-      integrity: sha512-PY6Ii8o1jMRA1z4F2hRkH/xN59ox43DavKvD3oDpfurRlOJyAHpifIwpbdv1n4jt4ov0jSpw3kQ4GhJnpBL6WQ==
   /inflight/1.0.6:
     dependencies:
       once: 1.4.0
@@ -931,13 +920,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==
-  /mkdirp/0.5.5:
-    dependencies:
-      minimist: 1.2.5
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   /mkdirp/1.0.4:
     dev: false
     engines:
@@ -977,17 +959,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==
-  /needle/2.6.0:
-    dependencies:
-      debug: 3.2.7
-      iconv-lite: 0.4.24
-      sax: 1.2.4
-    dev: false
-    engines:
-      node: '>= 4.4.x'
-    hasBin: true
-    resolution:
-      integrity: sha512-KKYdza4heMsEfSWD7VPUIz3zX2XDwOyX2d+geb4vrERZMT5RMU6ujjaD+I5Yr54uZxQ2w6XRTAhHBbSCyovZBg==
   /negotiator/0.6.2:
     dev: false
     engines:
@@ -1019,14 +990,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-xOqifvw/3N+tIeeC80/TNJXkoxDZm8JWc7/0VBkJ86ttQTlJvoicuVaeJlKKHYRlmC2O6ygNIhNPwLYX4bxqdA==
-  /nopt/4.0.3:
-    dependencies:
-      abbrev: 1.1.1
-      osenv: 0.1.5
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-CvaGwVMztSMJLOeXPrez7fyfObdZqNUK1cPAEzLHrTybIua9pMdmmPR5YwtfNftIOMv3DPUhFaxsZMNTQO20Kg==
   /nopt/5.0.0:
     dependencies:
       abbrev: 1.1.1
@@ -1036,24 +999,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==
-  /npm-bundled/1.1.2:
-    dependencies:
-      npm-normalize-package-bin: 1.0.1
-    dev: false
-    resolution:
-      integrity: sha512-x5DHup0SuyQcmL3s7Rx/YQ8sbw/Hzg0rj48eN0dV7hf5cmQq5PXIeioroH3raV1QC1yh3uTYuMThvEQF3iKgGQ==
-  /npm-normalize-package-bin/1.0.1:
-    dev: false
-    resolution:
-      integrity: sha512-EPfafl6JL5/rU+ot6P3gRSCpPDW5VmIzX959Ob1+ySFUuuYHWHekXpwdUZcKP5C+DS4GEtdJluwBjnsNDl+fSA==
-  /npm-packlist/1.4.8:
-    dependencies:
-      ignore-walk: 3.0.4
-      npm-bundled: 1.1.2
-      npm-normalize-package-bin: 1.0.1
-    dev: false
-    resolution:
-      integrity: sha512-5+AZgwru5IevF5ZdnFglB5wNlHG1AOOuw28WhUq8/8emhBmLv6jX5by4WJCh7lW0uSYZYS6DXqIsyZVIXRZU9A==
   /npmlog/4.1.2:
     dependencies:
       are-we-there-yet: 1.1.5
@@ -1099,25 +1044,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-VSTi1aWFuCkRCVq+tx/BQ5q9fMnQ9pVZ3JU4UHKqTkf0ED3fKEPdr+gKAAl3IA2hj9rrP6iyq3hlcJq3HELtNQ==
-  /os-homedir/1.0.2:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-/7xJiDNuDoM94MFox+8VISGqf7M=
-  /os-tmpdir/1.0.2:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
-  /osenv/0.1.5:
-    dependencies:
-      os-homedir: 1.0.2
-      os-tmpdir: 1.0.2
-    dev: false
-    resolution:
-      integrity: sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==
   /parse-cache-control/1.0.1:
     dev: false
     resolution:
@@ -1606,14 +1532,14 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@discordjs/opus': ^0.3.3
+  '@discordjs/opus': ^0.5.3
   canvas: ^2.8.0
   common-tags: ^1.8.0
   discord-buttons: ^3.2.1
   discord.js: ^12.5.3
   discordjs-ytdl-advanced: ^0.1.6
   express: ^4.17.1
-  genius-lyrics: ^4.2.0
+  genius-lyrics: ^4.2.9
   moment: ^2.29.1
   moment-duration-format: ^2.3.2
   ms: ^2.1.3
@@ -1622,4 +1548,4 @@ specifiers:
   quick.db: ^7.1.3
   simple-youtube-api: ^5.2.1
   ytdl-core: ^4.8.3
-  ytdl-core-discord: ^1.2.5
+  ytdl-core-discord: ^1.3.1
