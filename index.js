@@ -466,4 +466,4 @@ return message.channel.send(
         }
     }
 });
-client.login(ayarlar.Token)
+client.login(process.env.Token)
