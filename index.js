@@ -466,4 +466,4 @@ return message.channel.send(
         }
     }
 });
-client.login(process.env.Token)
+client.login("ODQ5MDIzMDk1NDQ3NzQ4NjA4.YLVIYA.DW_zm-YE_IDutKB9BUOZRQNezeg")
