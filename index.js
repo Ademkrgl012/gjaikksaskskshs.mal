@@ -14,15 +14,6 @@ const express = require('express');
 const db = require('quick.db');
 const fs = require('fs');
 const ayarlar = require('./ayarlar.json')
-const app = express();
-app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping tamamdır.");
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.repl.co`);
-}, 280000);
 
 client.on("warn", info => console.log(info));
 
